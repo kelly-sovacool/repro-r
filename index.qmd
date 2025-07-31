@@ -1,0 +1,194 @@
+---
+title: "Reproducible R"
+subtitle: Tips & Tricks to make your projects reproducible
+author: "Kelly Sovacool"
+date: 2025-08-12
+date-format: MMM DD, YYYY
+mainfont: Helvetica
+format:
+  revealjs:
+    theme: custom.scss
+    embed-resources: false
+knitr:
+  opts_chunk:
+    fig.path: figures/
+---
+
+## About me
+
+Bioinformatics Software Engineer for cancer research
+
+:::: {layout-ncol=2}
+![](img/fnlcr.png){width=180px}
+![](img/nci.png){width=210px}
+::::
+
+:::{.fragment}
+PhD from the University of Michigan
+
+Volunteered with Girls Who Code & Software Carpentry
+
+:::: {layout-ncol=2}
+![](img/gwc.png){width="250px"}
+![](img/software-carpentry.png){width="250px"}
+::::
+:::
+
+::: footer
+_Views are my own and do not represent my employer_
+:::
+
+## Software Engineering for Genomic Data Science
+
+## Data Science & Software Development
+
+## Defining reproducibility
+
+- **Reproducibilty** is the ability to get the same result with the same data set and the same methods
+- **Replicability** is the ability to get the same result with a different data set using the same methods
+
+:::{.notes}
+- reproducibilty - the ability to get the same result with the same data set and the same methods
+- replicability - the ability to get the same result with a different data set using the same methods
+- robustness
+- generalizability
+- reusability
+:::
+
+## What is reproducibility
+
+| Methods           | Same data       | Different data    |
+|-------------------|-----------------|-------------------|
+| Same methods      | Reproducibility | Replicability     |
+| Different methods | Robustness      | Generalizability  |
+
+:::{.notes}
+- reproducibilty - the ability to get the same result with the same data set and the same methods
+- replicability - the ability to get the same result with a different data set using the same methods
+- robustness
+- generalizability
+- reusability
+:::
+
+## Why care about reproducibility? {.hidden}
+
+## Reproducibility is a spectrum {.hidden}
+
+If you tried to reproduce a well-known research paper in your field:
+
+- Would you come to the same conclusion?
+- How many hours of work would it take you to repeat the analysis?
+- How close would the statistical estimates be between the original and the reproduction?
+
+## Is your work reproducible?
+
+:::{.fragment}
+For peers in your field?
+:::
+
+:::{.fragment}
+For your colleagues?
+:::
+
+:::{.fragment}
+For _yourself_?
+:::
+
+::::{.notes}
+- Someone reads your paper and wants to take inspiration from your work.
+  Could someone else in your field take your code and data and get the same results?
+- A colleague wants to use your methods and apply if to their own dataset.
+- If you took a break from your project and came back to it 6 months later, could you easily pick up where you left off?
+- If your computer crashed, could you immediately reproduce your analysis and continue where you left off?
+
+Reproducibility is all about communicating with your collaborators (peers, colleagues, and yourself!)
+::::
+
+## Types of (R) projects
+
+- One-off analysis script or notebook
+- Complex analysis with multiple scripts
+  - Product: paper or report
+- R package
+
+## How to make your work reproducible
+
+- Project-oriented organization
+- Describe the analysis workflow
+- Define the dependencies
+- Version control & sharing
+
+::: {.notes}
+These are tips you can adopt to improve the reproducibility of your work.
+It isn't all or nothing; working towards any one of these is worthwhile!
+:::
+
+## Project-oriented organization
+
+Scenario: you are given a new project with a dataset to analyze.
+You create a new R Markdown / Quarto / Jupyter notebook for initial exploratory
+analysis.
+
+The initial results look promising, so you continue to pursue the analysis.
+
+After a while, your original notebook is pretty messy with steps for data cleaning,
+filtering, statistical analyses, and visualization all over the place and out of order.
+
+Maybe you put your notebook in the same folder on your computer as another related but different analysis.
+But those projects have diverged to answer very different questions,
+and it's getting hard to keep track of which files go with which project.
+
+It's time to get organized!
+
+## Project-oriented organization: keep it contained
+
+- Create a separate, self-contained folder for each project.
+- Use a consistent subdirectory structure within the project folder
+
+
+:::{.column width="45%"}
+```
+~/projects/lung-cancer
+├── clinical-metadata-lung.csv
+├── correlation-liver.R
+├── exploratory.Rmd
+├── heatmap-2.R
+├── heatmap.R
+├── linreg.R
+├── liver-ATAC-peaks.bed
+├── metadata-liver.csv
+└── RNAseq-counts.csv
+```
+:::
+
+## How to make your R projects reproducible {.hidden}
+
+- Project-oriented organization
+  - organize into directories for code, data, figures, notebooks
+  - Every paper is a self-contained directory/folder.
+
+    Put all of the figures, code, & data that go into a paper in one place.
+    Keeps you organized while you're working on the project.
+    Makes it easier to find what you're looking for later on.
+
+  - Use `.Rproj` files: Enables relative paths rather than absolute paths to files. `{here}`
+
+- Describe the analysis workflow
+  - Describe steps to go from raw data through visualizations
+  - Even better: automate the workflow
+    - ideally, include a driver script / orchestrator. main.R, bash script, makefile, drake, Snakemake workflow, nextflow workflow
+
+- Define the dependencies
+    - list in the readme, description file, optionally use renv or conda
+
+- Version control & sharing
+
+
+:::{.column width="72%"}
+:::
+
+:::{.notes}
+:::
+
+:::{.fragment}
+:::

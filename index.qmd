@@ -394,6 +394,124 @@ Not necessary if your analysis is straightforward with just a few scripts that r
 If you use any packages outside of base R, you'll need to know which packages
 and (possibly) which versions
 
+::::{.fragment}
+- Look for `library()` in your scripts and direct calls such as `dplyr::filter()`
+- List them in your README file
+
+:::{.frame}
+`README.md`
+
+##### Dependencies
+
+This project requires R >= 4.0 and the following packages:
+
+- dplyr
+- ggplot2
+- here
+- readr
+- tidymodels
+:::
+::::
+
+## Describe the dependencies in a DESCRIPTION file
+
+Your project doesn't have to be an R package to use a DESCRIPTION file.
+Create one with `usethis::use_description(check_name=FALSE)`:
+
+:::{.frame-box}
+```
+Package: repro-r
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R:
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+```
+:::
+
+## Describe the dependencies in a DESCRIPTION file
+
+Add packages to your DESCRIPTION file with `usethis::use_package('packagename')`
+
+:::{.frame-box}
+```
+Package: repro-r
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R:
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    dplyr,
+    ggplot2,
+    lubridate (>= 1.2)
+```
+:::
+
+Install your project's dependencies with `devtools::install_deps()`
+
+
+## Describe the dependencies with an environment manager
+
+If you need...
+
+- Different package versions for different projects
+- Packages for other languages too 🐍
+
+An environment manager will help!
+
+## Describe the dependencies with an environment manager
+
+- renv - primarily for R but can also handle Python. Works seamlessly with DESCRIPTION. `renv.lock`
+- conda, mamba - python, R, CLI tools, anything you can find in <anaconda.org>. `environment.yml`
+
+:::{.}
+docker & singularity containers if you need to control the operating system too
+:::
+
+## Describe the dependencies with an environment manager
+
+And document how to restore the environment in your README
+
+:::{.frame-box .column width="45%"}
+#### Dependencies
+
+Dependencies are listed in `DESCRIPTION` and can be installed with `renv::restore()`
+:::
+
+:::{.frame-box .column width="45%"}
+#### Dependencies
+
+Dependencies are listed in `environment.yml` and can be installed with `mamba env create -f environment.yml`
+:::
+
+:::{.notes}
+TODO renv command
+:::
+
+## Use version control
+
+- Help yourself keep track of how your project changes over time
+- Facilitate collaboration with others
+
+:::{.notes}
+Need to revert to a previously-working version? no problem!
+:::
+
+## Use version control: git + GitHub
+
+TODO
+
 ## How to make your R projects reproducible {.hidden}
 
 - Project-oriented organization
@@ -416,7 +534,12 @@ and (possibly) which versions
 
 - Version control & sharing
 
+- Secret bonus tip: document!
+  You've already been doing it if you created a readme file, described why you made certain analysis choices in your notebooks, etc
+
 ## Conclusion
+
+- Make your project portable -- can anyone run your code on their own computer?
 
 ## My analysis is simple, do I really need all this?
 

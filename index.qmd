@@ -145,14 +145,15 @@ It's time to get organized!
 - Create a separate, self-contained folder for each project.
 - Use a consistent subdirectory structure within the project folder
 
-
 :::{.column width="45%"}
 ```
 ~/projects/lung-cancer
 ├── clinical-metadata-lung.csv
 ├── correlation-liver.R
 ├── exploratory.Rmd
+├── heatmap-2.png
 ├── heatmap-2.R
+├── heatmap.png
 ├── heatmap.R
 ├── linreg.R
 ├── liver-ATAC-peaks.bed
@@ -160,6 +161,238 @@ It's time to get organized!
 └── RNAseq-counts.csv
 ```
 :::
+
+:::{.column width="45%"}
+```
+~/projects
+├── liver-cancer
+│   ├── correlation-liver.R
+│   ├── exploratory.Rmd
+│   ├── heatmap-2.png
+│   ├── heatmap-2.R
+│   ├── liver-ATAC-peaks.bed
+│   └── metadata-liver.csv
+└── lung-cancer
+    ├── clinical-metadata-lung.csv
+    ├── heatmap.png
+    ├── heatmap.R
+    ├── linreg.R
+    └── RNAseq-counts.csv
+```
+:::
+
+## Project-oriented organization: keep it contained
+
+- Create a separate, self-contained folder for each project.
+- Use a consistent subdirectory structure within the project folder
+
+:::{.column width="45%"}
+```
+~/projects
+├── liver-cancer
+│   ├── correlation-liver.R
+│   ├── exploratory.Rmd
+│   ├── heatmap-2.png
+│   ├── heatmap-2.R
+│   ├── liver-ATAC-peaks.bed
+│   └── metadata-liver.csv
+└── lung-cancer
+    ├── clinical-metadata-lung.csv
+    ├── heatmap.png
+    ├── heatmap.R
+    ├── linreg.R
+    └── RNAseq-counts.csv
+```
+:::
+
+:::{.column width="45%"}
+```
+~/projects
+├── liver-cancer
+│   ├── data
+│   │   ├── liver-ATAC-peaks.bed
+│   │   └── metadata-liver.csv
+│   ├── figures
+│   │   └── heatmap-2.png
+│   ├── notebooks
+│   │   └── exploratory.Rmd
+│   └── scripts
+│       ├── correlation-liver.R
+│       └── heatmap-2.R
+└── lung-cancer
+    ├── data
+    │   ├── clinical-metadata-lung.csv
+    │   └── RNAseq-counts.csv
+    ├── figures
+    │   └── heatmap.png
+    ├── notebooks
+    └── scripts
+        ├── heatmap.R
+        └── linreg.R
+```
+:::
+
+## Project-oriented organization: use RStudio projects
+
+Create `.Rproj` files with RStudio (`File > New project`)
+
+```
+~/projects
+├── liver-cancer
+│   ├── data
+│   ├── figures
+│   ├── liver-cancer.Rproj
+│   ├── notebooks
+│   └── scripts
+└── lung-cancer
+    ├── data
+    ├── figures
+    ├── lung-cancer.Rproj
+    ├── notebooks
+    └── scripts
+```
+
+`Rproj` contains project-specific settings and tells RStudio where the **root**
+of your project is
+
+## R projects enable better file path resolution
+
+`~/projects/lung-cancer/scripts/heatmap.R`
+
+:::{.column width="width=45%"}
+``` r
+library(tidyverse)
+
+rna_counts <- read_csv('/Users/myusername/Desktop/lung-cancer/data/RNAseq-counts.csv')
+```
+:::
+
+:::{.column width="width=45%"}
+``` r
+library(tidyverse)
+
+rna_counts <- read_csv('data/RNAseq-counts.csv')
+```
+:::
+
+Rproj tells RStudio that `~/projects/lung-cancer/` is the project root.
+
+## R projects + {here}
+
+:::{.column width="width=45%"}
+``` r
+library(here)
+library(tidyverse)
+
+rna_counts <- read_csv('data','RNAseq-counts.csv')
+```
+:::
+
+:::{.notes}
+to separate directories, mac and linux use forward slash `/`, but windows uses backslash `\`!
+:::
+
+## Project-oriented organization makes your projects portable
+
+- With a consistent directory structure, you and your colleagues will be able to locate files they're looking for.
+- With relative paths, others can run your code on their on computer without changing file paths.
+
+## Describe the analysis workflow
+
+In what order should you run these scripts?
+
+```
+lung-cancer/scripts
+├── clean-data.R
+├── feature-importance.R
+├── heatmap.R
+├── model-training.R
+├── plot-performance.R
+└── preprocess-data.R
+```
+
+## Describe the analysis workflow
+
+You could rename the files with numbers
+
+```
+lung-cancer/scripts
+├── 0_clean-data.R
+├── 1_preprocess-data.R
+├── 2_heatmap.R
+├── 3_model-training.R
+├── 4_plot-performance.R
+└── 5_feature-importance.R
+```
+
+::::{.fragment}
+Or perhaps describe the order in a README file
+
+:::{.frame-box}
+`README.md`
+
+The scripts were run in the following order:
+
+1. clean-data.R
+1. preprocess-data.R
+1. heatmap.R
+1. model-training.R
+1. plot-performance.R
+1. feature-importance.R
+:::
+
+::::
+
+:::{.notes}
+but there's a better way!
+:::
+
+## ~Describe~ Automate the analysis workflow
+
+Create a script to orchestrate the analysis
+
+:::{.frame-box}
+`lung-cancer/main.R`
+``` r
+library(here)
+source(here('scripts', 'clean-data.R'))
+source(here('scripts', 'preprocess-data.R'))
+source(here('scripts', 'heatmap.R'))
+source(here('scripts', 'model-training.R'))
+source(here('scripts', 'plot-performance.R'))
+source(here('scripts', 'feature-importance.R'))
+```
+:::
+
+:::{.notes}
+This could be as simple as a main R script that source your other scripts in the
+correct order, or a full-blown workflow manager
+:::
+
+
+## ~Describe~ Automate the analysis workflow
+
+For complex analyses, workflow managers orchestrate the execution and scale resources up or down as needed
+
+- Snakemake
+- Nextflow
+- drake
+
+:::{.notes}
+TODO add logos
+
+Use a workflow manager if:
+If you need to repeat steps multiple times (e.g. model training),
+some steps can be run in parallel, large analyses requiring a lot of resources,
+if you need to use different languages + CLI tools...
+
+Not necessary if your analysis is straightforward with just a few scripts that run sequentially
+:::
+
+## Describe the dependencies
+
+If you use any packages outside of base R, you'll need to know which packages
+and (possibly) which versions
 
 ## How to make your R projects reproducible {.hidden}
 
@@ -183,12 +416,23 @@ It's time to get organized!
 
 - Version control & sharing
 
+## Conclusion
 
-:::{.column width="72%"}
-:::
+## My analysis is simple, do I really need all this?
 
-:::{.notes}
-:::
+No! Pick and choose what works for you and your peers
 
 :::{.fragment}
+```
+~/projects/compost
+├── _quarto.yml
+├── data
+│   ├── 4057818.csv
+│   └── archive
+├── figures
+│   ├── temp-over-time.png
+│   └── temp-vs-weather.png
+├── notebook.qmd
+└── README.md
+```
 :::

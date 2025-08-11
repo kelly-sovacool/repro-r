@@ -38,13 +38,11 @@ Volunteered with Girls Who Code & Software Carpentry
 _Views are my own and do not represent my employer_
 :::
 
-## Software Engineering for Genomic Data Science {.hidden}
+:::{.notes}
+Software Engineering for Genomic Data Science
 
-TODO
-
-## Data Science & Software Development {.hidden}
-
-TODO
+Data Science & Software Development
+:::
 
 ## Defining reproducibility
 
@@ -152,19 +150,20 @@ Scenario: you are given a new project with a dataset to analyze.
 You create a new R Markdown / Quarto / Jupyter notebook for initial exploratory
 analysis.
 
+:::{.notes}
+
 The initial results look promising, so you continue to pursue the analysis.
 
-::: fragment
 After a while, your original notebook gets messy. There are steps for data cleaning,
 filtering, statistical analyses, and visualization all over the place and out of order.
 
 Maybe you put your notebook in the same folder on your computer as another related but different analysis.
 But those projects have diverged to answer very different questions,
 and it's getting hard to keep track of which files go with which project.
-:::
 
-::: fragment
 It's time to get organized!
+
+TODO cleanup
 :::
 
 ## Project-oriented organization: keep it contained

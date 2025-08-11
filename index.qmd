@@ -38,9 +38,13 @@ Volunteered with Girls Who Code & Software Carpentry
 _Views are my own and do not represent my employer_
 :::
 
-## Software Engineering for Genomic Data Science
+## Software Engineering for Genomic Data Science {.hidden}
 
-## Data Science & Software Development
+TODO
+
+## Data Science & Software Development {.hidden}
+
+TODO
 
 ## Defining reproducibility
 
@@ -55,22 +59,22 @@ _Views are my own and do not represent my employer_
 - reusability
 :::
 
-## What is reproducibility
+<br>
 
+:::{.fragment}
 | Methods           | Same data       | Different data    |
 |-------------------|-----------------|-------------------|
 | Same methods      | Reproducibility | Replicability     |
 | Different methods | Robustness      | Generalizability  |
+:::
 
-:::{.notes}
-- reproducibilty - the ability to get the same result with the same data set and the same methods
-- replicability - the ability to get the same result with a different data set using the same methods
-- robustness
-- generalizability
-- reusability
+::: footer
+Schloss PD. 2018. [10.1128/mBio.00525-18](https://doi.org/10.1128/mBio.00525-18).
 :::
 
 ## Why care about reproducibility? {.hidden}
+
+TODO
 
 ## Reproducibility is a spectrum {.hidden}
 
@@ -91,7 +95,11 @@ For your colleagues?
 :::
 
 :::{.fragment}
-For _yourself_?
+For yourself?
+:::
+
+:::{.fragment .align-center}
+Reproducibility is all about **communicating** with your collaborators
 :::
 
 ::::{.notes}
@@ -104,13 +112,6 @@ For _yourself_?
 Reproducibility is all about communicating with your collaborators (peers, colleagues, and yourself!)
 ::::
 
-## Types of (R) projects
-
-- One-off analysis script or notebook
-- Complex analysis with multiple scripts
-  - Product: paper or report
-- R package
-
 ## How to make your work reproducible
 
 - Project-oriented organization
@@ -119,8 +120,25 @@ Reproducibility is all about communicating with your collaborators (peers, colle
 - Version control & sharing
 
 ::: {.notes}
-These are tips you can adopt to improve the reproducibility of your work.
+These are a few tips you can adopt to improve the reproducibility of your work.
+This isn't an exhaustive list of all you could or should do to make your work reproducible.
 It isn't all or nothing; working towards any one of these is worthwhile!
+:::
+
+## Types of (R) projects
+
+- One-off analysis script or notebook
+- Complex analysis with multiple scripts
+- R package
+
+## Types of (R) projects
+
+- One-off analysis script or notebook
+- **Complex analysis with multiple scripts**
+- R package
+
+:::{.notes}
+product is often a paper or report
 :::
 
 ## Project-oriented organization
@@ -131,19 +149,25 @@ analysis.
 
 The initial results look promising, so you continue to pursue the analysis.
 
-After a while, your original notebook is pretty messy with steps for data cleaning,
+::: fragment
+After a while, your original notebook gets messy. There are steps for data cleaning,
 filtering, statistical analyses, and visualization all over the place and out of order.
 
 Maybe you put your notebook in the same folder on your computer as another related but different analysis.
 But those projects have diverged to answer very different questions,
 and it's getting hard to keep track of which files go with which project.
+:::
 
+::: fragment
 It's time to get organized!
+:::
 
 ## Project-oriented organization: keep it contained
 
 - Create a separate, self-contained folder for each project.
 - Use a consistent subdirectory structure within the project folder
+
+:::: fragment
 
 :::{.column width="45%"}
 ```
@@ -180,6 +204,8 @@ It's time to get organized!
     └── RNAseq-counts.csv
 ```
 :::
+
+::::
 
 ## Project-oriented organization: keep it contained
 
@@ -257,36 +283,46 @@ of your project is
 
 ## R projects enable better file path resolution
 
-`~/projects/lung-cancer/scripts/heatmap.R`
-
-:::{.column width="width=45%"}
+Before:
+`~/projects/lung-cancer/notebooks/heatmap.Rmd`
 ``` r
 library(tidyverse)
 
-rna_counts <- read_csv('/Users/myusername/Desktop/lung-cancer/data/RNAseq-counts.csv')
+# relative path from R script
+rna_counts <- read_csv('../data/RNAseq-counts.csv')
+
+# absolute path
+rna_counts <- read_csv('/Users/myusername/projects/lung-cancer/data/RNAseq-counts.csv')
 ```
+
+![](img/rstudio-knit-dir.png)
+
+:::{.notes}
+the absolute path is guaranteed to work on your computer, but not on anyone else's
 :::
 
-:::{.column width="width=45%"}
-``` r
-library(tidyverse)
+## R projects enable better file path resolution
 
-rna_counts <- read_csv('data/RNAseq-counts.csv')
+With Rproj:
 ```
-:::
+lung-cancer
+    ├── data
+    │   └── RNAseq-counts.csv
+    ├── lung-cancer.Rproj
+    └── notebooks
+        └── heatmap.Rmd
+```
 
-Rproj tells RStudio that `~/projects/lung-cancer/` is the project root.
-
-## R projects + {here}
-
-:::{.column width="width=45%"}
 ``` r
 library(here)
+#> here() starts at /Users/myusername/projects/lung-cancer/
+
 library(tidyverse)
 
-rna_counts <- read_csv('data','RNAseq-counts.csv')
+rna_counts <- read_csv(here('data','RNAseq-counts.csv'))
 ```
-:::
+
+Rproj tells RStudio that `~/projects/lung-cancer/` is the project root.
 
 :::{.notes}
 to separate directories, mac and linux use forward slash `/`, but windows uses backslash `\`!
@@ -295,7 +331,7 @@ to separate directories, mac and linux use forward slash `/`, but windows uses b
 ## Project-oriented organization makes your projects portable
 
 - With a consistent directory structure, you and your colleagues will be able to locate files they're looking for.
-- With relative paths, others can run your code on their on computer without changing file paths.
+- With Rproj files + relative paths, others can run your code on their own computer without editing the code to change the file paths.
 
 ## Describe the analysis workflow
 
@@ -325,12 +361,11 @@ lung-cancer/scripts
 └── 5_feature-importance.R
 ```
 
-::::{.fragment}
-Or perhaps describe the order in a README file
+## Describe the analysis workflow
+
+Or perhaps describe the order in a README file (`README.md`)
 
 :::{.frame-box}
-`README.md`
-
 The scripts were run in the following order:
 
 1. clean-data.R
@@ -341,13 +376,11 @@ The scripts were run in the following order:
 1. feature-importance.R
 :::
 
-::::
-
 :::{.notes}
 but there's a better way!
 :::
 
-## ~Describe~ Automate the analysis workflow
+## ~~Describe~~ Automate the analysis workflow
 
 Create a script to orchestrate the analysis
 
@@ -365,21 +398,24 @@ source(here('scripts', 'feature-importance.R'))
 :::
 
 :::{.notes}
-This could be as simple as a main R script that source your other scripts in the
-correct order, or a full-blown workflow manager
+This could be as simple as a main R script that sources your other scripts in the
+correct order, or a full-blown workflow manager.
 :::
 
 
-## ~Describe~ Automate the analysis workflow
+## Automate the analysis workflow
 
 For complex analyses, workflow managers orchestrate the execution and scale resources up or down as needed
 
-- Snakemake
-- Nextflow
-- drake
+:::{.align-center}
+![](img/workflow-ex.png)
+:::
+
+::: footer
+<https://nextflow-io.github.io/elixir-workshop-21/docs/first.html>
+:::
 
 :::{.notes}
-TODO add logos
 
 Use a workflow manager if:
 If you need to repeat steps multiple times (e.g. model training),
@@ -389,6 +425,15 @@ if you need to use different languages + CLI tools...
 Not necessary if your analysis is straightforward with just a few scripts that run sequentially
 :::
 
+## Automate the analysis workflow
+
+For complex analyses, workflow managers orchestrate the execution and scale resources up or down as needed
+
+- Snakemake
+- Nextflow
+- drake
+
+
 ## Describe the dependencies
 
 If you use any packages outside of base R, you'll need to know which packages
@@ -397,11 +442,14 @@ and (possibly) which versions
 ::::{.fragment}
 - Look for `library()` in your scripts and direct calls such as `dplyr::filter()`
 - List them in your README file
+::::
 
-:::{.frame}
-`README.md`
 
-##### Dependencies
+::::{.fragment}
+
+:::{.frame-box}
+
+**Dependencies**
 
 This project requires R >= 4.0 and the following packages:
 
@@ -410,7 +458,9 @@ This project requires R >= 4.0 and the following packages:
 - here
 - readr
 - tidymodels
+
 :::
+
 ::::
 
 ## Describe the dependencies in a DESCRIPTION file
@@ -473,10 +523,10 @@ An environment manager will help!
 ## Describe the dependencies with an environment manager
 
 - renv - primarily for R but can also handle Python. Works seamlessly with DESCRIPTION. `renv.lock`
-- conda, mamba - python, R, CLI tools, anything you can find in <anaconda.org>. `environment.yml`
+- conda, mamba - python, R, CLI tools, anything you can find at [anaconda.org](https://anaconda.org). `environment.yml`
 
-:::{.}
-docker & singularity containers if you need to control the operating system too
+:::{.fragment}
+- docker & singularity containers - if you need to control the operating system too
 :::
 
 ## Describe the dependencies with an environment manager
@@ -495,14 +545,12 @@ Dependencies are listed in `DESCRIPTION` and can be installed with `renv::restor
 Dependencies are listed in `environment.yml` and can be installed with `mamba env create -f environment.yml`
 :::
 
-:::{.notes}
-TODO renv command
-:::
 
 ## Use version control
 
 - Help yourself keep track of how your project changes over time
 - Facilitate collaboration with others
+
 
 :::{.notes}
 Need to revert to a previously-working version? no problem!
@@ -510,7 +558,83 @@ Need to revert to a previously-working version? no problem!
 
 ## Use version control: git + GitHub
 
-TODO
+- **git** is a command line program for tracking changes in a project.
+  Each project is its own repository ("repo") which has a history of changes.
+- **GitHub** is a website that hosts git repositories for sharing and collaboration.
+
+![](img/git-github.jpg){width=300}
+
+## Use version control: git + GitHub
+
+![](img/example-repo.png)
+
+## The only git commands you strictly need
+
+- `git init` -- create a new git repo in your project directory
+- `git add <files>` -- add files to be tracked by git
+- `git commit -m 'add heatmap script'` -- commit changes to the repo history
+
+## The only git commands you strictly need if you use github
+
+- `git init` -- create a new git repo in your project directory
+- `git add <files>` -- add files to be tracked by git
+- `git commit -m 'add heatmap script'` -- commit changes to the repo history
+- `git push` -- upload commits from your local repo to github
+- `git pull` -- download commits from github to your local repo
+
+## The only git commands you strictly need if you use github for collaboration
+
+- `git init` -- create a new git repo in your project directory
+- `git add <files>` -- add files to be tracked by git
+- `git commit -m 'add heatmap script'` -- commit changes to the repo history
+- `git push` -- upload commits from your local repo to github
+- `git pull` -- download commits from github to your local repo
+- `git branch` -- create a new branch
+- `git switch` -- switch to a branch
+- Use GitHub on the web to combine branches with pull requests
+
+## Use version control: git + GitHub
+
+![](img/gitflow.png)
+
+## Conclusion
+
+- Project-oriented organization
+- Describe the analysis workflow
+- Define the dependencies
+- Version control & sharing
+
+:::{.notes}
+
+- Project-oriented organization
+  - Help you stay organized so you know where to find the files you need and keep separate projects contained
+  - Make your projects portable -- can anyone run your code on their own computer?
+- Describe the analysis workflow
+  - Allow you to repeat steps if needed when parameters or datasets change
+  - step further: automate it to make it super easy to re-run the code
+- Define the dependencies
+  - makes your project portable
+  - easier for others to run
+- Version control & sharing
+  - keep track of how the project changes over time
+  - collaborate with others
+  - share your code as a portfolio
+
+Secret bonus tip: document!
+You've already been doing it if you created a readme file, described why you made certain analysis choices in your notebooks, etc
+:::
+
+## Conclusion
+
+- Project-oriented organization
+- Describe the analysis workflow
+- Define the dependencies
+- Version control & sharing
+- Document everything
+
+## My analysis is simple, do I really need all this?
+
+No! Pick and choose what works for you and your peers
 
 ## How to make your R projects reproducible {.hidden}
 
@@ -536,26 +660,3 @@ TODO
 
 - Secret bonus tip: document!
   You've already been doing it if you created a readme file, described why you made certain analysis choices in your notebooks, etc
-
-## Conclusion
-
-- Make your project portable -- can anyone run your code on their own computer?
-
-## My analysis is simple, do I really need all this?
-
-No! Pick and choose what works for you and your peers
-
-:::{.fragment}
-```
-~/projects/compost
-├── _quarto.yml
-├── data
-│   ├── 4057818.csv
-│   └── archive
-├── figures
-│   ├── temp-over-time.png
-│   └── temp-vs-weather.png
-├── notebook.qmd
-└── README.md
-```
-:::

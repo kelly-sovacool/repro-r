@@ -1,0 +1,282 @@
+[
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Reproducible R",
+    "section": "About me",
+    "text": "About me\nBioinformatics Software Engineer for cancer research\n\n\n\n \n\n\n\n\nPhD from the University of Michigan\nVolunteered with Girls Who Code & Software Carpentry\n\n\n\n \n\n\n\n\n\nViews are my own and do not represent my employer"
+  },
+  {
+    "objectID": "index.html#software-engineering-for-genomic-data-science",
+    "href": "index.html#software-engineering-for-genomic-data-science",
+    "title": "Reproducible R",
+    "section": "Software Engineering for Genomic Data Science",
+    "text": "Software Engineering for Genomic Data Science\nTODO"
+  },
+  {
+    "objectID": "index.html#data-science-software-development",
+    "href": "index.html#data-science-software-development",
+    "title": "Reproducible R",
+    "section": "Data Science & Software Development",
+    "text": "Data Science & Software Development\nTODO"
+  },
+  {
+    "objectID": "index.html#defining-reproducibility",
+    "href": "index.html#defining-reproducibility",
+    "title": "Reproducible R",
+    "section": "Defining reproducibility",
+    "text": "Defining reproducibility\n\nReproducibilty is the ability to get the same result with the same data set and the same methods\nReplicability is the ability to get the same result with a different data set using the same methods\n\n\n\nreproducibilty - the ability to get the same result with the same data set and the same methods\nreplicability - the ability to get the same result with a different data set using the same methods\nrobustness\ngeneralizability\nreusability\n\n\n\n\n\n\n\nMethods\nSame data\nDifferent data\n\n\n\n\nSame methods\nReproducibility\nReplicability\n\n\nDifferent methods\nRobustness\nGeneralizability\n\n\n\n\n\nSchloss PD. 2018. 10.1128/mBio.00525-18."
+  },
+  {
+    "objectID": "index.html#why-care-about-reproducibility",
+    "href": "index.html#why-care-about-reproducibility",
+    "title": "Reproducible R",
+    "section": "Why care about reproducibility?",
+    "text": "Why care about reproducibility?\nTODO"
+  },
+  {
+    "objectID": "index.html#reproducibility-is-a-spectrum",
+    "href": "index.html#reproducibility-is-a-spectrum",
+    "title": "Reproducible R",
+    "section": "Reproducibility is a spectrum",
+    "text": "Reproducibility is a spectrum\nIf you tried to reproduce a well-known research paper in your field:\n\nWould you come to the same conclusion?\nHow many hours of work would it take you to repeat the analysis?\nHow close would the statistical estimates be between the original and the reproduction?"
+  },
+  {
+    "objectID": "index.html#is-your-work-reproducible",
+    "href": "index.html#is-your-work-reproducible",
+    "title": "Reproducible R",
+    "section": "Is your work reproducible?",
+    "text": "Is your work reproducible?\n\nFor peers in your field?\n\n\nFor your colleagues?\n\n\nFor yourself?\n\n\nReproducibility is all about communicating with your collaborators\n\n\n\nSomeone reads your paper and wants to take inspiration from your work. Could someone else in your field take your code and data and get the same results?\nA colleague wants to use your methods and apply if to their own dataset.\nIf you took a break from your project and came back to it 6 months later, could you easily pick up where you left off?\nIf your computer crashed, could you immediately reproduce your analysis and continue where you left off?\n\nReproducibility is all about communicating with your collaborators (peers, colleagues, and yourself!)"
+  },
+  {
+    "objectID": "index.html#how-to-make-your-work-reproducible",
+    "href": "index.html#how-to-make-your-work-reproducible",
+    "title": "Reproducible R",
+    "section": "How to make your work reproducible",
+    "text": "How to make your work reproducible\n\nProject-oriented organization\nDescribe the analysis workflow\nDefine the dependencies\nVersion control & sharing\n\n\nThese are a few tips you can adopt to improve the reproducibility of your work. This isn’t an exhaustive list of all you could or should do to make your work reproducible. It isn’t all or nothing; working towards any one of these is worthwhile!"
+  },
+  {
+    "objectID": "index.html#types-of-r-projects",
+    "href": "index.html#types-of-r-projects",
+    "title": "Reproducible R",
+    "section": "Types of (R) projects",
+    "text": "Types of (R) projects\n\nOne-off analysis script or notebook\nComplex analysis with multiple scripts\nR package"
+  },
+  {
+    "objectID": "index.html#types-of-r-projects-1",
+    "href": "index.html#types-of-r-projects-1",
+    "title": "Reproducible R",
+    "section": "Types of (R) projects",
+    "text": "Types of (R) projects\n\nOne-off analysis script or notebook\nComplex analysis with multiple scripts\nR package\n\n\nproduct is often a paper or report"
+  },
+  {
+    "objectID": "index.html#project-oriented-organization",
+    "href": "index.html#project-oriented-organization",
+    "title": "Reproducible R",
+    "section": "Project-oriented organization",
+    "text": "Project-oriented organization\nScenario: you are given a new project with a dataset to analyze. You create a new R Markdown / Quarto / Jupyter notebook for initial exploratory analysis.\nThe initial results look promising, so you continue to pursue the analysis.\n\nAfter a while, your original notebook gets messy. There are steps for data cleaning, filtering, statistical analyses, and visualization all over the place and out of order.\nMaybe you put your notebook in the same folder on your computer as another related but different analysis. But those projects have diverged to answer very different questions, and it’s getting hard to keep track of which files go with which project.\n\n\nIt’s time to get organized!"
+  },
+  {
+    "objectID": "index.html#project-oriented-organization-keep-it-contained",
+    "href": "index.html#project-oriented-organization-keep-it-contained",
+    "title": "Reproducible R",
+    "section": "Project-oriented organization: keep it contained",
+    "text": "Project-oriented organization: keep it contained\n\nCreate a separate, self-contained folder for each project.\nUse a consistent subdirectory structure within the project folder\n\n\n\n~/projects/lung-cancer\n├── clinical-metadata-lung.csv\n├── correlation-liver.R\n├── exploratory.Rmd\n├── heatmap-2.png\n├── heatmap-2.R\n├── heatmap.png\n├── heatmap.R\n├── linreg.R\n├── liver-ATAC-peaks.bed\n├── metadata-liver.csv\n└── RNAseq-counts.csv\n\n~/projects\n├── liver-cancer\n│   ├── correlation-liver.R\n│   ├── exploratory.Rmd\n│   ├── heatmap-2.png\n│   ├── heatmap-2.R\n│   ├── liver-ATAC-peaks.bed\n│   └── metadata-liver.csv\n└── lung-cancer\n    ├── clinical-metadata-lung.csv\n    ├── heatmap.png\n    ├── heatmap.R\n    ├── linreg.R\n    └── RNAseq-counts.csv"
+  },
+  {
+    "objectID": "index.html#project-oriented-organization-keep-it-contained-1",
+    "href": "index.html#project-oriented-organization-keep-it-contained-1",
+    "title": "Reproducible R",
+    "section": "Project-oriented organization: keep it contained",
+    "text": "Project-oriented organization: keep it contained\n\nCreate a separate, self-contained folder for each project.\nUse a consistent subdirectory structure within the project folder\n\n\n~/projects\n├── liver-cancer\n│   ├── correlation-liver.R\n│   ├── exploratory.Rmd\n│   ├── heatmap-2.png\n│   ├── heatmap-2.R\n│   ├── liver-ATAC-peaks.bed\n│   └── metadata-liver.csv\n└── lung-cancer\n    ├── clinical-metadata-lung.csv\n    ├── heatmap.png\n    ├── heatmap.R\n    ├── linreg.R\n    └── RNAseq-counts.csv\n\n~/projects\n├── liver-cancer\n│   ├── data\n│   │   ├── liver-ATAC-peaks.bed\n│   │   └── metadata-liver.csv\n│   ├── figures\n│   │   └── heatmap-2.png\n│   ├── notebooks\n│   │   └── exploratory.Rmd\n│   └── scripts\n│       ├── correlation-liver.R\n│       └── heatmap-2.R\n└── lung-cancer\n    ├── data\n    │   ├── clinical-metadata-lung.csv\n    │   └── RNAseq-counts.csv\n    ├── figures\n    │   └── heatmap.png\n    ├── notebooks\n    └── scripts\n        ├── heatmap.R\n        └── linreg.R"
+  },
+  {
+    "objectID": "index.html#project-oriented-organization-use-rstudio-projects",
+    "href": "index.html#project-oriented-organization-use-rstudio-projects",
+    "title": "Reproducible R",
+    "section": "Project-oriented organization: use RStudio projects",
+    "text": "Project-oriented organization: use RStudio projects\nCreate .Rproj files with RStudio (File &gt; New project)\n~/projects\n├── liver-cancer\n│   ├── data\n│   ├── figures\n│   ├── liver-cancer.Rproj\n│   ├── notebooks\n│   └── scripts\n└── lung-cancer\n    ├── data\n    ├── figures\n    ├── lung-cancer.Rproj\n    ├── notebooks\n    └── scripts\nRproj contains project-specific settings and tells RStudio where the root of your project is"
+  },
+  {
+    "objectID": "index.html#r-projects-enable-better-file-path-resolution",
+    "href": "index.html#r-projects-enable-better-file-path-resolution",
+    "title": "Reproducible R",
+    "section": "R projects enable better file path resolution",
+    "text": "R projects enable better file path resolution\nBefore: ~/projects/lung-cancer/notebooks/heatmap.Rmd\nlibrary(tidyverse)\n\n# relative path from R script\nrna_counts &lt;- read_csv('../data/RNAseq-counts.csv')\n\n# absolute path\nrna_counts &lt;- read_csv('/Users/myusername/projects/lung-cancer/data/RNAseq-counts.csv')\n\n\nthe absolute path is guaranteed to work on your computer, but not on anyone else’s"
+  },
+  {
+    "objectID": "index.html#r-projects-enable-better-file-path-resolution-1",
+    "href": "index.html#r-projects-enable-better-file-path-resolution-1",
+    "title": "Reproducible R",
+    "section": "R projects enable better file path resolution",
+    "text": "R projects enable better file path resolution\nWith Rproj:\nlung-cancer\n    ├── data\n    │   └── RNAseq-counts.csv\n    ├── lung-cancer.Rproj\n    └── notebooks\n        └── heatmap.Rmd\nlibrary(here)\n#&gt; here() starts at /Users/myusername/projects/lung-cancer/\n\nlibrary(tidyverse)\n\nrna_counts &lt;- read_csv(here('data','RNAseq-counts.csv'))\nRproj tells RStudio that ~/projects/lung-cancer/ is the project root.\n\nto separate directories, mac and linux use forward slash /, but windows uses backslash \\!"
+  },
+  {
+    "objectID": "index.html#project-oriented-organization-makes-your-projects-portable",
+    "href": "index.html#project-oriented-organization-makes-your-projects-portable",
+    "title": "Reproducible R",
+    "section": "Project-oriented organization makes your projects portable",
+    "text": "Project-oriented organization makes your projects portable\n\nWith a consistent directory structure, you and your colleagues will be able to locate files they’re looking for.\nWith Rproj files + relative paths, others can run your code on their own computer without editing the code to change the file paths."
+  },
+  {
+    "objectID": "index.html#describe-the-analysis-workflow",
+    "href": "index.html#describe-the-analysis-workflow",
+    "title": "Reproducible R",
+    "section": "Describe the analysis workflow",
+    "text": "Describe the analysis workflow\nIn what order should you run these scripts?\nlung-cancer/scripts\n├── clean-data.R\n├── feature-importance.R\n├── heatmap.R\n├── model-training.R\n├── plot-performance.R\n└── preprocess-data.R"
+  },
+  {
+    "objectID": "index.html#describe-the-analysis-workflow-1",
+    "href": "index.html#describe-the-analysis-workflow-1",
+    "title": "Reproducible R",
+    "section": "Describe the analysis workflow",
+    "text": "Describe the analysis workflow\nYou could rename the files with numbers\nlung-cancer/scripts\n├── 0_clean-data.R\n├── 1_preprocess-data.R\n├── 2_heatmap.R\n├── 3_model-training.R\n├── 4_plot-performance.R\n└── 5_feature-importance.R"
+  },
+  {
+    "objectID": "index.html#describe-the-analysis-workflow-2",
+    "href": "index.html#describe-the-analysis-workflow-2",
+    "title": "Reproducible R",
+    "section": "Describe the analysis workflow",
+    "text": "Describe the analysis workflow\nOr perhaps describe the order in a README file (README.md)\n\nThe scripts were run in the following order:\n\nclean-data.R\npreprocess-data.R\nheatmap.R\nmodel-training.R\nplot-performance.R\nfeature-importance.R\n\n\n\nbut there’s a better way!"
+  },
+  {
+    "objectID": "index.html#describe-automate-the-analysis-workflow",
+    "href": "index.html#describe-automate-the-analysis-workflow",
+    "title": "Reproducible R",
+    "section": "Describe Automate the analysis workflow",
+    "text": "Describe Automate the analysis workflow\nCreate a script to orchestrate the analysis\n\nlung-cancer/main.R\nlibrary(here)\nsource(here('scripts', 'clean-data.R'))\nsource(here('scripts', 'preprocess-data.R'))\nsource(here('scripts', 'heatmap.R'))\nsource(here('scripts', 'model-training.R'))\nsource(here('scripts', 'plot-performance.R'))\nsource(here('scripts', 'feature-importance.R'))\n\n\nThis could be as simple as a main R script that sources your other scripts in the correct order, or a full-blown workflow manager."
+  },
+  {
+    "objectID": "index.html#automate-the-analysis-workflow",
+    "href": "index.html#automate-the-analysis-workflow",
+    "title": "Reproducible R",
+    "section": "Automate the analysis workflow",
+    "text": "Automate the analysis workflow\nFor complex analyses, workflow managers orchestrate the execution and scale resources up or down as needed\n\n\n\n\nhttps://nextflow-io.github.io/elixir-workshop-21/docs/first.html\n\n\nUse a workflow manager if: If you need to repeat steps multiple times (e.g. model training), some steps can be run in parallel, large analyses requiring a lot of resources, if you need to use different languages + CLI tools…\nNot necessary if your analysis is straightforward with just a few scripts that run sequentially"
+  },
+  {
+    "objectID": "index.html#automate-the-analysis-workflow-1",
+    "href": "index.html#automate-the-analysis-workflow-1",
+    "title": "Reproducible R",
+    "section": "Automate the analysis workflow",
+    "text": "Automate the analysis workflow\nFor complex analyses, workflow managers orchestrate the execution and scale resources up or down as needed\n\nSnakemake\nNextflow\ndrake"
+  },
+  {
+    "objectID": "index.html#describe-the-dependencies",
+    "href": "index.html#describe-the-dependencies",
+    "title": "Reproducible R",
+    "section": "Describe the dependencies",
+    "text": "Describe the dependencies\nIf you use any packages outside of base R, you’ll need to know which packages and (possibly) which versions\n\n\nLook for library() in your scripts and direct calls such as dplyr::filter()\nList them in your README file\n\n\n\n\nDependencies\nThis project requires R &gt;= 4.0 and the following packages:\n\ndplyr\nggplot2\nhere\nreadr\ntidymodels"
+  },
+  {
+    "objectID": "index.html#describe-the-dependencies-in-a-description-file",
+    "href": "index.html#describe-the-dependencies-in-a-description-file",
+    "title": "Reproducible R",
+    "section": "Describe the dependencies in a DESCRIPTION file",
+    "text": "Describe the dependencies in a DESCRIPTION file\nYour project doesn’t have to be an R package to use a DESCRIPTION file. Create one with usethis::use_description(check_name=FALSE):\n\nPackage: repro-r\nTitle: What the Package Does (One Line, Title Case)\nVersion: 0.0.0.9000\nAuthors@R:\n    person(\"First\", \"Last\", , \"first.last@example.com\", role = c(\"aut\", \"cre\"))\nDescription: What the package does (one paragraph).\nLicense: `use_mit_license()`, `use_gpl3_license()` or friends to pick a\n    license\nEncoding: UTF-8\nRoxygen: list(markdown = TRUE)\nRoxygenNote: 7.3.2"
+  },
+  {
+    "objectID": "index.html#describe-the-dependencies-in-a-description-file-1",
+    "href": "index.html#describe-the-dependencies-in-a-description-file-1",
+    "title": "Reproducible R",
+    "section": "Describe the dependencies in a DESCRIPTION file",
+    "text": "Describe the dependencies in a DESCRIPTION file\nAdd packages to your DESCRIPTION file with usethis::use_package('packagename')\n\nPackage: repro-r\nTitle: What the Package Does (One Line, Title Case)\nVersion: 0.0.0.9000\nAuthors@R:\n    person(\"First\", \"Last\", , \"first.last@example.com\", role = c(\"aut\", \"cre\"))\nDescription: What the package does (one paragraph).\nLicense: `use_mit_license()`, `use_gpl3_license()` or friends to pick a\n    license\nEncoding: UTF-8\nRoxygen: list(markdown = TRUE)\nRoxygenNote: 7.3.2\nImports:\n    dplyr,\n    ggplot2,\n    lubridate (&gt;= 1.2)\n\nInstall your project’s dependencies with devtools::install_deps()"
+  },
+  {
+    "objectID": "index.html#describe-the-dependencies-with-an-environment-manager",
+    "href": "index.html#describe-the-dependencies-with-an-environment-manager",
+    "title": "Reproducible R",
+    "section": "Describe the dependencies with an environment manager",
+    "text": "Describe the dependencies with an environment manager\nIf you need…\n\nDifferent package versions for different projects\nPackages for other languages too 🐍\n\nAn environment manager will help!"
+  },
+  {
+    "objectID": "index.html#describe-the-dependencies-with-an-environment-manager-1",
+    "href": "index.html#describe-the-dependencies-with-an-environment-manager-1",
+    "title": "Reproducible R",
+    "section": "Describe the dependencies with an environment manager",
+    "text": "Describe the dependencies with an environment manager\n\nrenv - primarily for R but can also handle Python. Works seamlessly with DESCRIPTION. renv.lock\nconda, mamba - python, R, CLI tools, anything you can find at anaconda.org. environment.yml\n\n\n\ndocker & singularity containers - if you need to control the operating system too"
+  },
+  {
+    "objectID": "index.html#describe-the-dependencies-with-an-environment-manager-2",
+    "href": "index.html#describe-the-dependencies-with-an-environment-manager-2",
+    "title": "Reproducible R",
+    "section": "Describe the dependencies with an environment manager",
+    "text": "Describe the dependencies with an environment manager\nAnd document how to restore the environment in your README\n\nDependencies\nDependencies are listed in DESCRIPTION and can be installed with renv::restore()\n\nDependencies\nDependencies are listed in environment.yml and can be installed with mamba env create -f environment.yml"
+  },
+  {
+    "objectID": "index.html#use-version-control",
+    "href": "index.html#use-version-control",
+    "title": "Reproducible R",
+    "section": "Use version control",
+    "text": "Use version control\n\nHelp yourself keep track of how your project changes over time\nFacilitate collaboration with others\n\n\nNeed to revert to a previously-working version? no problem!"
+  },
+  {
+    "objectID": "index.html#use-version-control-git-github",
+    "href": "index.html#use-version-control-git-github",
+    "title": "Reproducible R",
+    "section": "Use version control: git + GitHub",
+    "text": "Use version control: git + GitHub\n\ngit is a command line program for tracking changes in a project. Each project is its own repository (“repo”) which has a history of changes.\nGitHub is a website that hosts git repositories for sharing and collaboration."
+  },
+  {
+    "objectID": "index.html#use-version-control-git-github-1",
+    "href": "index.html#use-version-control-git-github-1",
+    "title": "Reproducible R",
+    "section": "Use version control: git + GitHub",
+    "text": "Use version control: git + GitHub"
+  },
+  {
+    "objectID": "index.html#the-only-git-commands-you-strictly-need",
+    "href": "index.html#the-only-git-commands-you-strictly-need",
+    "title": "Reproducible R",
+    "section": "The only git commands you strictly need",
+    "text": "The only git commands you strictly need\n\ngit init – create a new git repo in your project directory\ngit add &lt;files&gt; – add files to be tracked by git\ngit commit -m 'add heatmap script' – commit changes to the repo history"
+  },
+  {
+    "objectID": "index.html#the-only-git-commands-you-strictly-need-if-you-use-github",
+    "href": "index.html#the-only-git-commands-you-strictly-need-if-you-use-github",
+    "title": "Reproducible R",
+    "section": "The only git commands you strictly need if you use github",
+    "text": "The only git commands you strictly need if you use github\n\ngit init – create a new git repo in your project directory\ngit add &lt;files&gt; – add files to be tracked by git\ngit commit -m 'add heatmap script' – commit changes to the repo history\ngit push – upload commits from your local repo to github\ngit pull – download commits from github to your local repo"
+  },
+  {
+    "objectID": "index.html#the-only-git-commands-you-strictly-need-if-you-use-github-for-collaboration",
+    "href": "index.html#the-only-git-commands-you-strictly-need-if-you-use-github-for-collaboration",
+    "title": "Reproducible R",
+    "section": "The only git commands you strictly need if you use github for collaboration",
+    "text": "The only git commands you strictly need if you use github for collaboration\n\ngit init – create a new git repo in your project directory\ngit add &lt;files&gt; – add files to be tracked by git\ngit commit -m 'add heatmap script' – commit changes to the repo history\ngit push – upload commits from your local repo to github\ngit pull – download commits from github to your local repo\ngit branch – create a new branch\ngit switch – switch to a branch\nUse GitHub on the web to combine branches with pull requests"
+  },
+  {
+    "objectID": "index.html#use-version-control-git-github-2",
+    "href": "index.html#use-version-control-git-github-2",
+    "title": "Reproducible R",
+    "section": "Use version control: git + GitHub",
+    "text": "Use version control: git + GitHub"
+  },
+  {
+    "objectID": "index.html#conclusion",
+    "href": "index.html#conclusion",
+    "title": "Reproducible R",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nProject-oriented organization\nDescribe the analysis workflow\nDefine the dependencies\nVersion control & sharing\n\n\n\nProject-oriented organization\n\nHelp you stay organized so you know where to find the files you need and keep separate projects contained\nMake your projects portable – can anyone run your code on their own computer?\n\nDescribe the analysis workflow\n\nAllow you to repeat steps if needed when parameters or datasets change\nstep further: automate it to make it super easy to re-run the code\n\nDefine the dependencies\n\nmakes your project portable\neasier for others to run\n\nVersion control & sharing\n\nkeep track of how the project changes over time\ncollaborate with others\nshare your code as a portfolio\n\n\nSecret bonus tip: document! You’ve already been doing it if you created a readme file, described why you made certain analysis choices in your notebooks, etc"
+  },
+  {
+    "objectID": "index.html#conclusion-1",
+    "href": "index.html#conclusion-1",
+    "title": "Reproducible R",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nProject-oriented organization\nDescribe the analysis workflow\nDefine the dependencies\nVersion control & sharing\nDocument everything"
+  },
+  {
+    "objectID": "index.html#my-analysis-is-simple-do-i-really-need-all-this",
+    "href": "index.html#my-analysis-is-simple-do-i-really-need-all-this",
+    "title": "Reproducible R",
+    "section": "My analysis is simple, do I really need all this?",
+    "text": "My analysis is simple, do I really need all this?\nNo! Pick and choose what works for you and your peers"
+  },
+  {
+    "objectID": "index.html#how-to-make-your-r-projects-reproducible",
+    "href": "index.html#how-to-make-your-r-projects-reproducible",
+    "title": "Reproducible R",
+    "section": "How to make your R projects reproducible",
+    "text": "How to make your R projects reproducible\n\nProject-oriented organization\n\norganize into directories for code, data, figures, notebooks\nEvery paper is a self-contained directory/folder.\nPut all of the figures, code, & data that go into a paper in one place. Keeps you organized while you’re working on the project. Makes it easier to find what you’re looking for later on.\nUse .Rproj files: Enables relative paths rather than absolute paths to files. {here}\n\nDescribe the analysis workflow\n\nDescribe steps to go from raw data through visualizations\nEven better: automate the workflow\n\nideally, include a driver script / orchestrator. main.R, bash script, makefile, drake, Snakemake workflow, nextflow workflow\n\n\nDefine the dependencies\n\nlist in the readme, description file, optionally use renv or conda\n\nVersion control & sharing\nSecret bonus tip: document! You’ve already been doing it if you created a readme file, described why you made certain analysis choices in your notebooks, etc"
+  }
+]

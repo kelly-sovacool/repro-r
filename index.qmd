@@ -72,9 +72,13 @@ TODO
 Schloss PD. 2018. [10.1128/mBio.00525-18](https://doi.org/10.1128/mBio.00525-18).
 :::
 
-## Why care about reproducibility? {.hidden}
+## Why care about reproducibility?
 
-TODO
+- Reproducible research practices enable others to validate your work and build off of it
+
+:::{.fragment}
+- They can also make your life easier when you need to update software, try out different parameters, or fix bugs in your code!
+:::
 
 ## Reproducibility is a spectrum {.hidden}
 
@@ -110,6 +114,7 @@ Reproducibility is all about **communicating** with your collaborators
 - If your computer crashed, could you immediately reproduce your analysis and continue where you left off?
 
 Reproducibility is all about communicating with your collaborators (peers, colleagues, and yourself!)
+You are your most important collaborator
 ::::
 
 ## How to make your work reproducible

@@ -4,21 +4,7 @@
     "href": "index.html#about-me",
     "title": "Reproducible R",
     "section": "About me",
-    "text": "About me\nBioinformatics Software Engineer for cancer research\n\n\n\n \n\n\n\n\nPhD from the University of Michigan\nVolunteered with Girls Who Code & Software Carpentry\n\n\n\n \n\n\n\n\n\nViews are my own and do not represent my employer"
-  },
-  {
-    "objectID": "index.html#software-engineering-for-genomic-data-science",
-    "href": "index.html#software-engineering-for-genomic-data-science",
-    "title": "Reproducible R",
-    "section": "Software Engineering for Genomic Data Science",
-    "text": "Software Engineering for Genomic Data Science\nTODO"
-  },
-  {
-    "objectID": "index.html#data-science-software-development",
-    "href": "index.html#data-science-software-development",
-    "title": "Reproducible R",
-    "section": "Data Science & Software Development",
-    "text": "Data Science & Software Development\nTODO"
+    "text": "About me\nBioinformatics Software Engineer for cancer research\n\n\n\n \n\n\n\n\nPhD from the University of Michigan\nVolunteered with Girls Who Code & Software Carpentry\n\n\n\n \n\n\n\n\n\nViews are my own and do not represent my employer\n\n\nSoftware Engineering for Genomic Data Science\nData Science & Software Development"
   },
   {
     "objectID": "index.html#defining-reproducibility",
@@ -32,7 +18,7 @@
     "href": "index.html#why-care-about-reproducibility",
     "title": "Reproducible R",
     "section": "Why care about reproducibility?",
-    "text": "Why care about reproducibility?\nTODO"
+    "text": "Why care about reproducibility?\n\nReproducible research practices enable others to validate your work and build off of it\n\n\n\nThey can also make your life easier when you need to update software, try out different parameters, or fix bugs in your code!"
   },
   {
     "objectID": "index.html#reproducibility-is-a-spectrum",
@@ -46,7 +32,7 @@
     "href": "index.html#is-your-work-reproducible",
     "title": "Reproducible R",
     "section": "Is your work reproducible?",
-    "text": "Is your work reproducible?\n\nFor peers in your field?\n\n\nFor your colleagues?\n\n\nFor yourself?\n\n\nReproducibility is all about communicating with your collaborators\n\n\n\nSomeone reads your paper and wants to take inspiration from your work. Could someone else in your field take your code and data and get the same results?\nA colleague wants to use your methods and apply if to their own dataset.\nIf you took a break from your project and came back to it 6 months later, could you easily pick up where you left off?\nIf your computer crashed, could you immediately reproduce your analysis and continue where you left off?\n\nReproducibility is all about communicating with your collaborators (peers, colleagues, and yourself!)"
+    "text": "Is your work reproducible?\n\nFor peers in your field?\n\n\nFor your colleagues?\n\n\nFor yourself?\n\n\nReproducibility is all about communicating with your collaborators\n\n\n\nSomeone reads your paper and wants to take inspiration from your work. Could someone else in your field take your code and data and get the same results?\nA colleague wants to use your methods and apply if to their own dataset.\nIf you took a break from your project and came back to it 6 months later, could you easily pick up where you left off?\nIf your computer crashed, could you immediately reproduce your analysis and continue where you left off?\n\nReproducibility is all about communicating with your collaborators (peers, colleagues, and yourself!) You are your most important collaborator"
   },
   {
     "objectID": "index.html#how-to-make-your-work-reproducible",
@@ -74,7 +60,7 @@
     "href": "index.html#project-oriented-organization",
     "title": "Reproducible R",
     "section": "Project-oriented organization",
-    "text": "Project-oriented organization\nScenario: you are given a new project with a dataset to analyze. You create a new R Markdown / Quarto / Jupyter notebook for initial exploratory analysis.\nThe initial results look promising, so you continue to pursue the analysis.\n\nAfter a while, your original notebook gets messy. There are steps for data cleaning, filtering, statistical analyses, and visualization all over the place and out of order.\nMaybe you put your notebook in the same folder on your computer as another related but different analysis. But those projects have diverged to answer very different questions, and it’s getting hard to keep track of which files go with which project.\n\n\nIt’s time to get organized!"
+    "text": "Project-oriented organization\nScenario: you are given a new project with a dataset to analyze. You create a new R Markdown / Quarto / Jupyter notebook for initial exploratory analysis.\n\nThe initial results look promising, so you continue to pursue the analysis.\nAfter a while, your original notebook gets messy. There are steps for data cleaning, filtering, statistical analyses, and visualization all over the place and out of order.\nMaybe you put your notebook in the same folder on your computer as another related but different analysis. But those projects have diverged to answer very different questions, and it’s getting hard to keep track of which files go with which project.\nIt’s time to get organized!\nTODO cleanup"
   },
   {
     "objectID": "index.html#project-oriented-organization-keep-it-contained",

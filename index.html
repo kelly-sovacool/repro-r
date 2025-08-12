@@ -230,14 +230,20 @@ Kelly Sovacool
 <div class="footer">
 <p><em>Views are my own and do not represent my employer</em></p>
 </div>
-</section>
-<section id="software-engineering-for-genomic-data-science" class="slide level2 hidden">
-<h2>Software Engineering for Genomic Data Science</h2>
-<p>TODO</p>
-</section>
-<section id="data-science-software-development" class="slide level2 hidden">
-<h2>Data Science &amp; Software Development</h2>
-<p>TODO</p>
+<aside class="notes">
+<p>Software Engineering for Genomic Data Science</p>
+<p>Data Science &amp; Software Development</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="defining-reproducibility" class="slide level2">
 <h2>Defining reproducibility</h2>
@@ -292,9 +298,16 @@ Kelly Sovacool
 <p>Schloss PD. 2018. <a href="https://doi.org/10.1128/mBio.00525-18">10.1128/mBio.00525-18</a>.</p>
 </div>
 </section>
-<section id="why-care-about-reproducibility" class="slide level2 hidden">
+<section id="why-care-about-reproducibility" class="slide level2">
 <h2>Why care about reproducibility?</h2>
-<p>TODO</p>
+<ul>
+<li>Reproducible research practices enable others to validate your work and build off of it</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>They can also make your life easier when you need to update software, try out different parameters, or fix bugs in your code!</li>
+</ul>
+</div>
 </section>
 <section id="reproducibility-is-a-spectrum" class="slide level2 hidden">
 <h2>Reproducibility is a spectrum</h2>
@@ -326,7 +339,7 @@ Kelly Sovacool
 <li>If you took a break from your project and came back to it 6 months later, could you easily pick up where you left off?</li>
 <li>If your computer crashed, could you immediately reproduce your analysis and continue where you left off?</li>
 </ul>
-<p>Reproducibility is all about communicating with your collaborators (peers, colleagues, and yourself!)</p>
+<p>Reproducibility is all about communicating with your collaborators (peers, colleagues, and yourself!) You are your most important collaborator</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -393,14 +406,23 @@ Kelly Sovacool
 <section id="project-oriented-organization" class="slide level2">
 <h2>Project-oriented organization</h2>
 <p>Scenario: you are given a new project with a dataset to analyze. You create a new R Markdown / Quarto / Jupyter notebook for initial exploratory analysis.</p>
+<aside class="notes">
 <p>The initial results look promising, so you continue to pursue the analysis.</p>
-<div class="fragment">
 <p>After a while, your original notebook gets messy. There are steps for data cleaning, filtering, statistical analyses, and visualization all over the place and out of order.</p>
 <p>Maybe you put your notebook in the same folder on your computer as another related but different analysis. But those projects have diverged to answer very different questions, and it’s getting hard to keep track of which files go with which project.</p>
-</div>
-<div class="fragment">
 <p>It’s time to get organized!</p>
-</div>
+<p>TODO cleanup</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="project-oriented-organization-keep-it-contained" class="slide level2">
 <h2>Project-oriented organization: keep it contained</h2>
@@ -1243,7 +1265,7 @@ Imports:
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/kelly-sovacool\.github\.io\/repro-r\/");
+            var filterRegex = new RegExp('/' + window.location.host + '/');
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

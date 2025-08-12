@@ -84,7 +84,7 @@ Reproducibile research practices enable others to validate your work and build o
 
 <br>
 
-![](img/google-scholar.png){width="70%"}
+![](img/google-scholar.png){width="50%"}
 
 :::
 
@@ -110,10 +110,6 @@ For your colleagues?
 
 :::{.fragment}
 For yourself?
-:::
-
-:::{.fragment .align-center}
-Reproducibility is all about **communicating** with your collaborators
 :::
 
 ::::{.notes}
@@ -653,6 +649,31 @@ You've already been doing it if you created a readme file, described why you mad
 - Define the dependencies
 - Version control & sharing
 - Document everything
+
+
+:::{.fragment .align-center}
+Reproducibility is all about **communicating** with your collaborators
+:::
+
+:::{.notes}
+
+- Project-oriented organization
+  - Help you stay organized so you know where to find the files you need and keep separate projects contained
+  - Make your projects portable -- can anyone run your code on their own computer?
+- Describe the analysis workflow
+  - Allow you to repeat steps if needed when parameters or datasets change
+  - step further: automate it to make it super easy to re-run the code
+- Define the dependencies
+  - makes your project portable
+  - easier for others to run
+- Version control & sharing
+  - keep track of how the project changes over time
+  - collaborate with others
+  - share your code as a portfolio
+
+Secret bonus tip: document!
+You've already been doing it if you created a readme file, described why you made certain analysis choices in your notebooks, etc
+:::
 
 ## My analysis is simple, do I really need all this?
 

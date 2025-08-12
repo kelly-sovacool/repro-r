@@ -42,20 +42,14 @@ _Views are my own and do not represent my employer_
 Software Engineering for Genomic Data Science
 
 Data Science & Software Development
+
+I think of myself as part software engineer, part data scientist, and part teacher.
 :::
 
 ## Defining reproducibility
 
-- **Reproducibilty** is the ability to get the same result with the same data set and the same methods
-- **Replicability** is the ability to get the same result with a different data set using the same methods
-
-:::{.notes}
-- reproducibilty - the ability to get the same result with the same data set and the same methods
-- replicability - the ability to get the same result with a different data set using the same methods
-- robustness
-- generalizability
-- reusability
-:::
+- **Reproducibilty** is the ability to repeat an analysis with the same methods on the **same data** and get the same result
+- **Replicability** is the ability to repeat an analysis with the same methods on **different data** and get the same result
 
 <br>
 
@@ -70,21 +64,39 @@ Data Science & Software Development
 Schloss PD. 2018. [10.1128/mBio.00525-18](https://doi.org/10.1128/mBio.00525-18).
 :::
 
-## Why care about reproducibility?
+:::{.notes}
 
-- Reproducible research practices enable others to validate your work and build off of it
+- **Reproducibilty** is the ability to repeat an analysis with the same methods on the **same data** and get the same result
+- **Replicability** is the ability to repeat an analysis with the same methods on **different data** and get the same result
+- in order for your work to have a chance of being replicable, it must first be reproducible
+- robustness
+- generalizability
 
-:::{.fragment}
-- They can also make your life easier when you need to update software, try out different parameters, or fix bugs in your code!
 :::
 
-## Reproducibility is a spectrum {.hidden}
+## Why care about reproducibility?
 
-If you tried to reproduce a well-known research paper in your field:
+<br>
 
-- Would you come to the same conclusion?
-- How many hours of work would it take you to repeat the analysis?
-- How close would the statistical estimates be between the original and the reproduction?
+:::{.align-center}
+
+Reproducibile research practices enable others to validate your work and build on it
+
+<br>
+
+![](img/google-scholar.png){width="70%"}
+
+:::
+
+::: footer
+[scholar.google.com](https://scholar.google.com)
+:::
+
+:::{.notes}
+- reproducibility is the first step in validating research results. it's the minimum required to show that results are valid.
+- They can also make your life easier when you need to update software, try out different parameters, or fix bugs in your code!
+- reusability
+:::
 
 ## Is your work reproducible?
 
@@ -113,6 +125,12 @@ Reproducibility is all about **communicating** with your collaborators
 
 Reproducibility is all about communicating with your collaborators (peers, colleagues, and yourself!)
 You are your most important collaborator
+
+If you tried to reproduce a well-known research paper in your field:
+
+- Would you come to the same conclusion?
+- How many hours of work would it take you to repeat the analysis?
+- How close would the statistical estimates be between the original and the reproduction?
 ::::
 
 ## How to make your work reproducible

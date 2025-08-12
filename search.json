@@ -4,35 +4,28 @@
     "href": "index.html#about-me",
     "title": "Reproducible R",
     "section": "About me",
-    "text": "About me\nBioinformatics Software Engineer for cancer research\n\n\n\n \n\n\n\n\nPhD from the University of Michigan\nVolunteered with Girls Who Code & Software Carpentry\n\n\n\n \n\n\n\n\n\nViews are my own and do not represent my employer\n\n\nSoftware Engineering for Genomic Data Science\nData Science & Software Development"
+    "text": "About me\nBioinformatics Software Engineer for cancer research\n\n\n\n \n\n\n\n\nPhD from the University of Michigan\nVolunteered with Girls Who Code & Software Carpentry\n\n\n\n \n\n\n\n\n\nViews are my own and do not represent my employer\n\n\nSoftware Engineering for Genomic Data Science\nData Science & Software Development\nI think of myself as part software engineer, part data scientist, and part teacher."
   },
   {
     "objectID": "index.html#defining-reproducibility",
     "href": "index.html#defining-reproducibility",
     "title": "Reproducible R",
     "section": "Defining reproducibility",
-    "text": "Defining reproducibility\n\nReproducibilty is the ability to get the same result with the same data set and the same methods\nReplicability is the ability to get the same result with a different data set using the same methods\n\n\n\nreproducibilty - the ability to get the same result with the same data set and the same methods\nreplicability - the ability to get the same result with a different data set using the same methods\nrobustness\ngeneralizability\nreusability\n\n\n\n\n\n\n\nMethods\nSame data\nDifferent data\n\n\n\n\nSame methods\nReproducibility\nReplicability\n\n\nDifferent methods\nRobustness\nGeneralizability\n\n\n\n\n\nSchloss PD. 2018. 10.1128/mBio.00525-18."
+    "text": "Defining reproducibility\n\nReproducibilty is the ability to repeat an analysis with the same methods on the same data and get the same result\nReplicability is the ability to repeat an analysis with the same methods on different data and get the same result\n\n\n\n\n\n\nMethods\nSame data\nDifferent data\n\n\n\n\nSame methods\nReproducibility\nReplicability\n\n\nDifferent methods\nRobustness\nGeneralizability\n\n\n\n\n\nSchloss PD. 2018. 10.1128/mBio.00525-18.\n\n\n\nReproducibilty is the ability to repeat an analysis with the same methods on the same data and get the same result\nReplicability is the ability to repeat an analysis with the same methods on different data and get the same result\nin order for your work to have a chance of being replicable, it must first be reproducible\nrobustness\ngeneralizability"
   },
   {
     "objectID": "index.html#why-care-about-reproducibility",
     "href": "index.html#why-care-about-reproducibility",
     "title": "Reproducible R",
     "section": "Why care about reproducibility?",
-    "text": "Why care about reproducibility?\n\nReproducible research practices enable others to validate your work and build off of it\n\n\n\nThey can also make your life easier when you need to update software, try out different parameters, or fix bugs in your code!"
-  },
-  {
-    "objectID": "index.html#reproducibility-is-a-spectrum",
-    "href": "index.html#reproducibility-is-a-spectrum",
-    "title": "Reproducible R",
-    "section": "Reproducibility is a spectrum",
-    "text": "Reproducibility is a spectrum\nIf you tried to reproduce a well-known research paper in your field:\n\nWould you come to the same conclusion?\nHow many hours of work would it take you to repeat the analysis?\nHow close would the statistical estimates be between the original and the reproduction?"
+    "text": "Why care about reproducibility?\n\n\nReproducibile research practices enable others to validate your work and build on it\n\n\n\n\nscholar.google.com\n\n\n\nreproducibility is the first step in validating research results. it’s the minimum required to show that results are valid.\nThey can also make your life easier when you need to update software, try out different parameters, or fix bugs in your code!\nreusability"
   },
   {
     "objectID": "index.html#is-your-work-reproducible",
     "href": "index.html#is-your-work-reproducible",
     "title": "Reproducible R",
     "section": "Is your work reproducible?",
-    "text": "Is your work reproducible?\n\nFor peers in your field?\n\n\nFor your colleagues?\n\n\nFor yourself?\n\n\nReproducibility is all about communicating with your collaborators\n\n\n\nSomeone reads your paper and wants to take inspiration from your work. Could someone else in your field take your code and data and get the same results?\nA colleague wants to use your methods and apply if to their own dataset.\nIf you took a break from your project and came back to it 6 months later, could you easily pick up where you left off?\nIf your computer crashed, could you immediately reproduce your analysis and continue where you left off?\n\nReproducibility is all about communicating with your collaborators (peers, colleagues, and yourself!) You are your most important collaborator"
+    "text": "Is your work reproducible?\n\nFor peers in your field?\n\n\nFor your colleagues?\n\n\nFor yourself?\n\n\nReproducibility is all about communicating with your collaborators\n\n\n\nSomeone reads your paper and wants to take inspiration from your work. Could someone else in your field take your code and data and get the same results?\nA colleague wants to use your methods and apply if to their own dataset.\nIf you took a break from your project and came back to it 6 months later, could you easily pick up where you left off?\nIf your computer crashed, could you immediately reproduce your analysis and continue where you left off?\n\nReproducibility is all about communicating with your collaborators (peers, colleagues, and yourself!) You are your most important collaborator\nIf you tried to reproduce a well-known research paper in your field:\n\nWould you come to the same conclusion?\nHow many hours of work would it take you to repeat the analysis?\nHow close would the statistical estimates be between the original and the reproduction?"
   },
   {
     "objectID": "index.html#how-to-make-your-work-reproducible",

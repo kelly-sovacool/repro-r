@@ -704,3 +704,7 @@ No! Pick and choose what works for you and your peers
 - Secret bonus tip: document!
   You've already been doing it if you created a readme file, described why you made certain analysis choices in your notebooks, etc
 :::
+
+## {}
+
+![](img/rladies-trondheim.png)

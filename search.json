@@ -249,13 +249,6 @@
     "href": "index.html#my-analysis-is-simple-do-i-really-need-all-this",
     "title": "Reproducible R",
     "section": "My analysis is simple, do I really need all this?",
-    "text": "My analysis is simple, do I really need all this?\nNo! Pick and choose what works for you and your peers"
-  },
-  {
-    "objectID": "index.html#how-to-make-your-r-projects-reproducible",
-    "href": "index.html#how-to-make-your-r-projects-reproducible",
-    "title": "Reproducible R",
-    "section": "How to make your R projects reproducible",
-    "text": "How to make your R projects reproducible\n\nProject-oriented organization\n\norganize into directories for code, data, figures, notebooks\nEvery paper is a self-contained directory/folder.\nPut all of the figures, code, & data that go into a paper in one place. Keeps you organized while you’re working on the project. Makes it easier to find what you’re looking for later on.\nUse .Rproj files: Enables relative paths rather than absolute paths to files. {here}\n\nDescribe the analysis workflow\n\nDescribe steps to go from raw data through visualizations\nEven better: automate the workflow\n\nideally, include a driver script / orchestrator. main.R, bash script, makefile, drake, Snakemake workflow, nextflow workflow\n\n\nDefine the dependencies\n\nlist in the readme, description file, optionally use renv or conda\n\nVersion control & sharing\nSecret bonus tip: document! You’ve already been doing it if you created a readme file, described why you made certain analysis choices in your notebooks, etc"
+    "text": "My analysis is simple, do I really need all this?\nNo! Pick and choose what works for you and your peers\n\n\nProject-oriented organization\n\norganize into directories for code, data, figures, notebooks\nEvery paper is a self-contained directory/folder.\nPut all of the figures, code, & data that go into a paper in one place. Keeps you organized while you’re working on the project. Makes it easier to find what you’re looking for later on.\nUse .Rproj files: Enables relative paths rather than absolute paths to files. {here}\n\nDescribe the analysis workflow\n\nDescribe steps to go from raw data through visualizations\nEven better: automate the workflow\n\nideally, include a driver script / orchestrator. main.R, bash script, makefile, drake, Snakemake workflow, nextflow workflow\n\n\nDefine the dependencies\n\nlist in the readme, description file, optionally use renv or conda\n\nVersion control & sharing\nSecret bonus tip: document! You’ve already been doing it if you created a readme file, described why you made certain analysis choices in your notebooks, etc"
   }
 ]

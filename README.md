@@ -12,6 +12,8 @@ try out different parameters in a pipeline, or find bugs in your code!
 
 This talk was prepared for [R Ladies Trondheim](https://www.meetup.com/rladies-trondheim/) on August 12, 2025.
 
+The rendered slides are available here: <http://sovacool.dev/repro-r/>
+
 ## Inspiration and Resources
 
 - RmdDD

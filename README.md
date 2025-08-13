@@ -10,7 +10,7 @@ try out different parameters in a pipeline, or find bugs in your code!
 - **Reproducibility** is the ability to regenerate a result with the same data set and data analysis pipeline.
 - **Replicability** is the ability to produce a consistent result with an independent experiment asking the same scientific question.
 
-This talk was prepared for [R Ladies Trondheim](https://www.meetup.com/rladies-trondheim/) on August 12, 2025.
+This talk was presented at [R Ladies Trondheim](https://www.meetup.com/rladies-trondheim/) on August 12, 2025.
 
 The rendered slides are available here: <http://sovacool.dev/repro-r/>
 

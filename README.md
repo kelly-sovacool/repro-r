@@ -16,9 +16,9 @@ The rendered slides are available here: <http://sovacool.dev/repro-r/>
 
 ## Inspiration and Resources
 
-- RmdDD
-    - https://www.emilyriederer.com/post/rmarkdown-driven-development/
-    - https://resources.rstudio.com/resources/rstudioconf-2020/rmarkdown-driven-development/
 - https://doi.org/10.1371/journal.pcbi.1005510
 - https://doi.org/10.1371/journal.pcbi.1003285
 - https://doi.org/10.1128/mBio.00525-18
+- RmdDD
+    - https://www.emilyriederer.com/post/rmarkdown-driven-development/
+    - https://resources.rstudio.com/resources/rstudioconf-2020/rmarkdown-driven-development/
